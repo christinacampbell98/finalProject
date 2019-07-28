@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-button (click)='explore()'>EXPLORE</ion-button>
+    <ion-button (click)='saved()'>SAVED</ion-button>
+    <ion-button (click)='trips()'>TRIPS</ion-button>
+    <ion-button (click)='inbox()'>INBOX</ion-button>
+    <ion-button (click)='profile()'>PROFILE</ion-button>
+  </ion-toolbar></ion-header>
+
+<ion-content >
+    <body class="page">
+      <ion-avatar><img src='/assets/avatar.jpg'></ion-avatar>
+      <h1>Hi, my Name is {{user.firstName}} {{user.lastName}}</h1>
+      <hr>
+      <h2>Contact me:</h2>
+      <ul>
+        <li>Email: {{user.email}}</li>
+        <li>Phone: {{user.phone}}</li>
+      </ul>
+
+
+
+
+    </body>
+  </ion-content>

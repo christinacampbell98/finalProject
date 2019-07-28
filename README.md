@@ -54,19 +54,19 @@ Please include the mark down table in the README.md file in the root directory o
 
 | PROJECT             | COMPONENT          | FILE NAMES                                                                                                                                                                              |
 |---------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Consumer mobile app | Login              | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\login & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\login               |
-| Consumer mobile app | Registration       | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\registration & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\registration |
-| Consumer mobile app | User Profile       | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\user & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\user                 |
-| Consumer mobile app | List of Properties | eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\pages\properties & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\properties     |
-| Provider mobile app | Login              | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\login & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\login               |
-| Provider mobile app | Registration       | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\registration & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\registration |
-| Provider mobile app | User Profile       | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\user & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\user                 |
-| Provider mobile app | List of Properties | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\properties & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\properties     |
-| Provider mobile app | List of Bookings   | eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\pages\bookings & eg. Rubric-file-structure\provider-mobile-app\provider-mobile-app\src\providers\bookings         |
-| Admin Panel         | Users              | eg. Rubric-file-structure\admin-panel\admin-panel\src\app\components\users & eg. Rubric-file-structure\admin-panel\admin-panel\src\app\services\users                                   |
-| Admin Panel         | Bookings           | eg. Rubric-file-structure\admin-panel\admin-panel\src\pages\bookings & eg. Rubric-file-structure\admin-panel\admin-panel\src\src\app\services\bookings                                  |
-| API                 | Users              | eg. Rubric-file-structure\API\api\src\pages\users & eg. Rubric-file-structure\api\api\provider-mobile-app\src\api\users                                                                 |
-| API                 | Bookings           | eg. Rubric-file-structure\API\api\src\pages\bookings & eg. Rubric-file-structure\api\api\provider-mobile-app\src\api\bookings                                                           |
+| Consumer mobile app | Login              | Rubric-file-structure/consumer-mobile-app/consumer-mobile-app/src/app/pages/home            |
+| Consumer mobile app | Registration       | /Rubric-file-structure/consumer-mobile-app/consumer-mobile-app/src/app/pages/register  |
+| Consumer mobile app | User Profile       |Rubric-file-structure/consumer-mobile-app/consumer-mobile-app/src/app/pages/profile                |
+| Consumer mobile app | List of Properties |Rubric-file-structure/consumer-mobile-app/consumer-mobile-app/src/app/pages/explore   |
+| Provider mobile app | Login              | Rubric-file-structure/provider-mobile-app/provider-mobile-app/src/app/pages/home  |
+| Provider mobile app | Registration       |Rubric-file-structure/provider-mobile-app/provider-mobile-app/src/app/pages/register |
+| Provider mobile app | User Profile       | Rubric-file-structure/provider-mobile-app/provider-mobile-app/src/app/pages/profile  |
+| Provider mobile app | List of Properties |Rubric-file-structure/provider-mobile-app/provider-mobile-app/src/app/pages/explore   |
+| Provider mobile app | List of Bookings   | Rubric-file-structure/provider-mobile-app/provider-mobile-app/src/app/pages/booking-request  |
+| Admin Panel         | Users              | Rubric-file-structure/admin-panel/admin-panel/src/app/users |
+| Admin Panel         | Bookings           | Rubric-file-structure/admin-panel/admin-panel/src/app/bookings  |
+| API                 | Users              |Rubric-file-structure/API/api/src/api
+| API                 | Bookings           | Rubric-file-structure/API/api/src/api/booking-routes.js                                               |
 
 ### Change Git Remote URL
 

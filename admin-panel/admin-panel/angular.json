@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "admin-panel": {
+    "fs-bnb-admin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/admin-panel",
+            "outputPath": "dist/fs-bnb-admin",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+          ],
             "scripts": []
           },
           "configurations": {
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "admin-panel:build"
+            "browserTarget": "fs-bnb-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "admin-panel:build:production"
+              "browserTarget": "fs-bnb-admin:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "admin-panel:build"
+            "browserTarget": "fs-bnb-admin:build"
           }
         },
         "test": {
@@ -110,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "admin-panel:serve"
+            "devServerTarget": "fs-bnb-admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "admin-panel:serve:production"
+              "devServerTarget": "fs-bnb-admin:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "admin-panel"
+  "defaultProject": "fs-bnb-admin"
 }

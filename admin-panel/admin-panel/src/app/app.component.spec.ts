@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'admin-panel'`, () => {
+  it(`should have as title 'fs-bnb-admin'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('admin-panel');
+    expect(app.title).toEqual('fs-bnb-admin');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to admin-panel!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to fs-bnb-admin!');
   });
 });

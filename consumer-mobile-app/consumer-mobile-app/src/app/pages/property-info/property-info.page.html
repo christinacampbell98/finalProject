@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>propertyInfo</ion-title>
+    <ion-button (click)=back()>Back to Listings</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h1>  {{property.title}}</h1><br>
+    <img class= "image" src = "{{property.imgURL}}"  />
+    <h3>Location: {{property.location}}</h3>
+    <h3>${{property.pricePerNight}} per night</h3><br>
+    <hr>
+    <h5>Description: {{property.description}}</h5>
+    <h2>Want to book?</h2><br>
+    <ion-item>
+        <ion-label>Start Date(YYYY MM DD)</ion-label>
+        <ion-datetime displayFormat="YYYY MM DD" placeholder="Select Start Date" [(ngModel)]="start"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>End Date(YYYY MM DD)</ion-label>
+          <ion-datetime displayFormat="YYYY MM DD" placeholder="Select End Date" [(ngModel)]="end"></ion-datetime>
+      </ion-item>
+      <ion-button (click)=createBooking()>Request to Book</ion-button>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>explore</ion-title>
+    <ion-button (click)='explore()'>EXPLORE</ion-button>
+    <ion-button (click)='saved()'>SAVED</ion-button>
+    <ion-button (click)='trips()'>TRIPS</ion-button>
+    <ion-button (click)='inbox()'>INBOX</ion-button>
+    <ion-button (click)='profile()'>PROFILE</ion-button>
+  </ion-toolbar>
+
+</ion-header>
+
+
+  <ion-content>
+      <ion-card *ngFor = 'let listing of listings' (click)=viewProperty(listing)>
+        <img class= "image" src = "{{listing.imgURL}}"  />
+        <ion-card-header>
+          <ion-card-title>{{listing.title}}</ion-card-title>
+          <ion-card-subtitle>{{listing.location}}</ion-card-subtitle>
+          <ion-card-subtitle>${{listing.pricePerNight}}</ion-card-subtitle>
+        </ion-card-header> -->
+      </ion-card>
+</ion-content>
+
+
+
