@@ -1,0 +1,14 @@
+<ion-header>
+        <ion-title>Create New Rental</ion-title>
+        <ion-button (click)= back()> Back to Explore</ion-button>
+</ion-header>
+
+<ion-content>
+    <ion-input type=text placeholder="title" [(ngModel)]="title"></ion-input><br>
+    <ion-input type=text placeholder="description" [(ngModel)]="description"></ion-input><br>
+    <ion-input type=text placeholder="location" [(ngModel)]="location"></ion-input><br>
+    <ion-input type=text placeholder="Price Per Night" [(ngModel)]="pricePerNight"></ion-input><br>
+    <ion-input type=text placeholder="img URL" [(ngModel)]="imgURL"></ion-input><br>
+    <ion-button (click)=create()>Create</ion-button>
+
+</ion-content>
