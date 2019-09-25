@@ -13,33 +13,49 @@ import {Bookings} from '../../models/bookings';
   templateUrl: './property-info.page.html',
   styleUrls: ['./property-info.page.scss'],
 })
-export class PropertyInfoPage  {
+export class PropertyInfoPage implements OnInit  {
   id: any;
-  property: Listings= new Listings();
   start: string;
   end: string;
   booking: Bookings = new Bookings();
   user: string;
+  property: any;
+  listings: any;
+  save: any;
 
   constructor(public alertCtrl: AlertController, public navCtrl: NavController,private listingService: ListingsService, private bookingService: BookingsService) {
-    this.id= {'id':parseInt(localStorage.getItem('id'))};
+    // this.id= {'id':parseInt(localStorage.getItem('id'))};
+    this.id = parseInt(localStorage.getItem('id'));
+    this.listings = this.listingService.listings;
+    this.save = localStorage.getItem('saved');
   }
 
-  ionViewWillEnter() {
-    this.listingService.getPropertyID(this.id).then(res=>{
-      console.log("test: ")
-      console.log(res);
-      this.property=res;
+  ngOnInit() {
+    this.property=this.listings[this.id-1];
+    // console.log(this.id.id);
+    // this.listings.forEach(function (value){
+    //   console.log(value.id);
+    //   if (this.id.id == value.id){
+    //     console.log("test");
+    //     this.property=value;
+    // this.listingService.getPropertyID(this.id).then(res=>{
+    //   console.log("test: ")
+    //   console.log(res);
+    //   this.property=res;
 
-      }).catch(err=>{
-        console.log(err);
-      })
+    //   }).catch(err=>{
+    //     console.log(err);
+    //   })
 
 
   }
 
   back(){
     this.navCtrl.navigateForward('explore');
+  }
+  saved(property){
+    this.listingService.saved.push(property.id);
+    this.navCtrl.navigateForward('saved');
   }
   createBooking(){
     // this.user=localStorage.getItem('userid');
@@ -60,9 +76,9 @@ export class PropertyInfoPage  {
   }
   async presentAlert(msg) {
     const alert = await this.alertCtrl.create({
-      header: 'Alert',
-      message: msg,
-      buttons: ['OK']
+      header: 'Congrats!',
+      message: "Booking was successful!",
+      buttons: ['Dismiss']
     });
     await alert.present();
 

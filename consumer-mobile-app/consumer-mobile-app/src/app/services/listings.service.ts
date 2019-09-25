@@ -7,14 +7,16 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ListingsService {
-  // listings: Array<Listings>;
-  // listing1 = new Listings('Apartment in Cape Town', 'Cape Town - CBD', 750, '../../assets/home1.jpg');
-  // listing2 = new Listings('Newlands town house', 'Cape Town - Newlands', 300, '../../assets/home1.jpg');
-  // listing3 = new Listings('2 Bedroom flat', 'Cape Town - Wynburg', 350, '../../assets/home1.jpg');
+  listings: Array<Listings>;
+  saved: Array<number>;
+  listing1 = new Listings(1,'Apartment in Cape Town',"Beautiful home on the coast of Cape Town", 'Cape Town - CBD', "750", '../../assets/home1.jpg');
+  listing2 = new Listings(2,'Newlands town house', "Great house in the country side",'Cape Town - Newlands', 300, '../../assets/home2.jpg');
+  listing3 = new Listings(3,'2 Bedroom flat',"Its a must see!!", 'Cape Town - Wynburg', 350, '../../assets/home3.jpg');
   private id: Number;
   private property: any;
   constructor(private http: HttpClient) { 
-    // this.listings= [this.listing1,this.listing2,this.listing3,];
+    this.listings= [this.listing1,this.listing2,this.listing3,];
+    this.saved = [1];
   }
 
   // setProperty(prop){

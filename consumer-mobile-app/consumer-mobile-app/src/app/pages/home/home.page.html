@@ -1,8 +1,16 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title class="welcome">Welcome Back!</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="tab-login">
+        <ion-label><b>Login</b></ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="tab-login" (click)='register()'>
+          <ion-label> <b>Sign Up</b></ion-label>
+       </ion-tab-button>
+    </ion-tab-bar>
+    
+  <h1 class="title">Login to Continue</h1>
+
+</ion-header>
 
 <ion-content>
   <body class="page">
@@ -15,8 +23,7 @@
     </ion-item>
     <br>
     <br>
-    <ion-button class = box (click)="login()">Login</ion-button>
-   <ion-button class=box (click)="register()">Register</ion-button>
+    <ion-button class="block" expand="full" color= "tertiary" (click)="login()">Login</ion-button><br>
    <a href="#">Forgot Password?</a>
   </body>
 </ion-content>

@@ -24,21 +24,25 @@ export class RegisterPage implements OnInit {
   }
 
   create(){
-    const newUser ={
-      firstName: this.first,
-      lastName: this.last,
-      email: this.email,
-      phone: this.phone,
-      password: this.password
-    }
-    this.userService.addUser(newUser).then(res => {
-      this.navCtrl.navigateForward('/explore', {
-        queryParams:
-        { user:res }
-      });
-    }).catch(err => {
-      this.presentAlert(err);
-    });  
+    this.navCtrl.navigateForward('explore');
+
+
+    //functioning code to add user to the database
+    // const newUser ={
+    //   firstName: this.first,
+    //   lastName: this.last,
+    //   email: this.email,
+    //   phone: this.phone,
+    //   password: this.password
+    // }
+    // this.userService.addUser(newUser).then(res => {
+    //   this.navCtrl.navigateForward('/explore', {
+    //     queryParams:
+    //     { user:res }
+    //   });
+    // }).catch(err => {
+    //   this.presentAlert(err);
+    // });  
   }
 
   async presentAlert(err) {

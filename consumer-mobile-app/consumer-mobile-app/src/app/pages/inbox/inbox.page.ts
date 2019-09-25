@@ -23,6 +23,8 @@ export class InboxPage implements OnInit {
 }
   profile(){    this.navCtrl.navigateForward('profile');
 }
+logout(){    this.navCtrl.navigateForward('home');
+}
 
 
 

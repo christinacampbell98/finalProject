@@ -1,13 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>explore</ion-title>
-    <ion-button (click)='explore()'>EXPLORE</ion-button>
-    <ion-button (click)='saved()'>SAVED</ion-button>
-    <ion-button (click)='trips()'>TRIPS</ion-button>
-    <ion-button (click)='inbox()'>INBOX</ion-button>
-    <ion-button (click)='profile()'>PROFILE</ion-button>
-  </ion-toolbar>
-
+  <ion-tab-bar>
+    <ion-tab-button (click)='explore()'>
+      <ion-icon name="compass"></ion-icon>
+      <ion-label>EXPLORE</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)='saved()'>
+        <ion-icon name="star"></ion-icon>
+      <ion-label>SAVED</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)='trips()'>
+        <ion-icon name="airplane"></ion-icon>
+        <ion-label>TRIPS</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)='inbox()'>
+        <ion-icon name="text"></ion-icon>
+        <ion-label>INBOX</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)='profile()'>
+        <ion-icon name="person"></ion-icon>
+        <ion-label>PROFILE</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)='logout()'>
+        <ion-icon name="hand"></ion-icon>
+        <ion-label>Logout</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
 </ion-header>
 
 
@@ -15,10 +32,10 @@
       <ion-card *ngFor = 'let listing of listings' (click)=viewProperty(listing)>
         <img class= "image" src = "{{listing.imgURL}}"  />
         <ion-card-header>
-          <ion-card-title>{{listing.title}}</ion-card-title>
-          <ion-card-subtitle>{{listing.location}}</ion-card-subtitle>
-          <ion-card-subtitle>${{listing.pricePerNight}}</ion-card-subtitle>
-        </ion-card-header> -->
+          <ion-card-title text-center>{{listing.title}}</ion-card-title>
+          <ion-card-subtitle text-center>{{listing.location}}</ion-card-subtitle>
+          <ion-card-subtitle text-center>${{listing.pricePerNight}}</ion-card-subtitle>
+        </ion-card-header> 
       </ion-card>
 </ion-content>
 

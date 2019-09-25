@@ -1,26 +1,44 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-    <ion-button (click)='explore()'>EXPLORE</ion-button>
-    <ion-button (click)='saved()'>SAVED</ion-button>
-    <ion-button (click)='trips()'>TRIPS</ion-button>
-    <ion-button (click)='inbox()'>INBOX</ion-button>
-    <ion-button (click)='profile()'>PROFILE</ion-button>
-  </ion-toolbar></ion-header>
+    <ion-tab-bar>
+      <ion-tab-button (click)='explore()'>
+        <ion-icon name="compass"></ion-icon>
+        <ion-label>EXPLORE</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)='saved()'>
+          <ion-icon name="star"></ion-icon>
+        <ion-label>SAVED</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)='trips()'>
+          <ion-icon name="airplane"></ion-icon>
+          <ion-label>TRIPS</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)='inbox()'>
+          <ion-icon name="text"></ion-icon>
+          <ion-label>INBOX</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)='profile()'>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>PROFILE</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)='logout()'>
+          <ion-icon name="hand"></ion-icon>
+          <ion-label>Logout</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-header>
+  
 
-<ion-content >
-    <body class="page">
-      <ion-avatar><img src='/assets/avatar.jpg'></ion-avatar>
-      <h1>Hi, my Name is {{user.firstName}} {{user.lastName}}</h1>
+<ion-content text-center >
+      <br><br><br><br>
+      <ion-avatar ><img src='/assets/Christina-Campbell.jpg'></ion-avatar>
+      <h1>Hi, my Name is Christina Campbell</h1>
+      <h3>I am from Houston,Texas and have been a member of AirBNB since 2002.</h3>
       <hr>
       <h2>Contact me:</h2>
       <ul>
-        <li>Email: {{user.email}}</li>
-        <li>Phone: {{user.phone}}</li>
+        <ion-item >Email: christina@mail.com</ion-item>
+        <ion-item>Phone: (713)-502-8848</ion-item>
       </ul>
 
 
-
-
-    </body>
   </ion-content>

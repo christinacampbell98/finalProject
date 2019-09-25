@@ -10,6 +10,7 @@ import { PropertyInfoPage } from './property-info.page';
 const routes: Routes = [
   {
     path: '',
+
     component: PropertyInfoPage
   }
 ];

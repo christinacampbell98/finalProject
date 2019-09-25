@@ -18,6 +18,7 @@ export class UserService {
       const headers = new HttpHeaders();
       this.http.post('http://localhost:5000/api/auth/loginU', Authuser, {headers})
       .subscribe((response:any)=>{
+        localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem('userid', response.id);
         console.log({"response:":response});
         resolve(response);
@@ -30,6 +31,10 @@ export class UserService {
 
     });
    }
+
+   logout(){
+    localStorage.setItem("isLoggedIn", "false");
+  }
    getUserByID(userID):Promise<any>{
     return new Promise<any>((resolve, reject) => {
       const headers = new HttpHeaders();

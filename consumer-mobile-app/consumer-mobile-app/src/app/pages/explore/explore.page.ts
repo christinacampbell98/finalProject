@@ -17,12 +17,8 @@ export class ExplorePage implements OnInit {
    }
 
   ngOnInit() {
-    this.listingsService.getListItems().then(res=>{
-      console.log(res);
-      this.listings=res;
-    }).catch(err=>{
-      console.log(err);
-    })
+    this.listings= this.listingsService.listings;
+    
   }
   
   explore(){
@@ -36,6 +32,9 @@ export class ExplorePage implements OnInit {
 }
   profile(){    this.navCtrl.navigateForward('profile');
 }
+logout(){    this.navCtrl.navigateForward('home');
+}
+
 viewProperty(listing){
   localStorage.setItem("id", listing.id);
   this.navCtrl.navigateForward('property-info', { 

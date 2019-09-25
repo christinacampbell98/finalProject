@@ -23,5 +23,7 @@ export class TripsPage implements OnInit {
 }
   profile(){    this.navCtrl.navigateForward('profile');
 }
+logout(){    this.navCtrl.navigateForward('home');
+}
 
 }
